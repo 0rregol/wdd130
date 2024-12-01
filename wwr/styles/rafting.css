@@ -17,24 +17,46 @@ a {
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
+    margin:auto;
+    display: grid;
+    grid-template-columns: 120px 1fr 2fr;
     align-items: center;
     padding: 10px 20px;
     background-color: var(--secondary-color);
-    color: white;
+    color: var(--accent2-color);
 }
 
 header .logo {
     height: 100px;
 }
 
+header .h1 {
+    font-size: 2rem;
+	font-family: "Carrois Gothic", serif;
+    color: var(--accent2-color);
+
+}
+nav {
+	text-align: right;
+    padding-right: 5%;
+}
 nav a {
     margin: 0 10px;
-    color: white;
+    color: var(--accent2-color);
     font-weight: bold;
 }
-
+nav a:hover  {
+    margin: 0 10px;
+    color: var(--accent1-color);
+    font-weight: bold;
+    
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
 .hero {
     position: relative;
@@ -84,6 +106,31 @@ nav a {
     padding: 30px;
     text-align: left;
 }
+.history {
+    padding: 50px;
+    text-align: justify;
+}
+
+h2 {
+    text-align: center;
+    font-family: "Carrois Gothic", serif;
+    color: var(--accent2-color);
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    
+  
+}
+
+.history img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    padding: 30px;
+}
 section {
     position: relative;
     left: 50%; 
@@ -91,10 +138,54 @@ section {
     width: 90%; 
 
 }
-footer { 
-    position: relative;
-    left: 50%; 
-    transform: translateX(-50%);
-    width: 90%;  
-    margin-top: 70px;
+.adventures {
+    padding: 20px;
+    margin-bottom: 50px;
+   
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    
+}
+.gallery figure {
+    border: thin #c0c0c0 solid;
+    display: flex;
+    flex-flow: column;
+    padding: 5px;
+    max-width: 220px;
+    margin: auto;
+}
+.gallery figcaption {
+    background-color: #222;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+  }
+  footer {
+    display: grid; 
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+    text-align: center; 
+    padding: 20px;
+    background-color: var(--secondary-color); 
+    color: var(--accent2-color); 
+}
+
+footer p {
+    grid-column: 1 / 2; 
+    margin: 0; 
+}
+
+footer .social {
+    grid-column: 2 / 3; 
+    display: flex; 
+   
+}
+
+footer .social img {
+    width: 35px;
+    height: 35px;
+    padding: 10px;
 }
