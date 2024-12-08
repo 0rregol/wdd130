@@ -127,6 +127,8 @@ nav ul {
   }
   .maps{
    border: 0; 
+   width: 100%;
+   height: auto;
   }
 
 h2 {
